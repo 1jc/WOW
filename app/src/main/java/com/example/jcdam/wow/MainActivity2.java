@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -17,6 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
     RecyclerView.LayoutManager recyclerViewLayoutManager;
 
     String[] numbers = {
+            "",
             "ACDC Rock",
             "Adbrea Bocelli Classical",
             "Celine Dion Contemporary",
@@ -32,6 +37,26 @@ public class MainActivity2 extends AppCompatActivity {
             "Tahitian Polynesian",
 
     };
+
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater mMenuInflater = getMenuInflater();
+    mMenuInflater.inflate(R.menu.my_menu, menu);
+    return true;
+}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.action_setting) {
+            Toast.makeText(MainActivity2.this, "You have clicked on setting action menu.", Toast.LENGTH_SHORT).show();
+        }
+        if(item.getItemId()==R.id.action_about_us) {
+            Toast.makeText(MainActivity2.this, "This application made by Joette Damo which consists of menus and navigation.", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
 
 
     @Override

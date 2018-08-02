@@ -1,5 +1,21 @@
 <resources>
+
+    <!--wow-->
     <string name="app_name">WOW</string>
     <string name="edit_message">\"Enter a message\"</string>
     <string name="button_send">\"Send\"</string>
+    <string name="menu_action_setting">Setting</string>
+    <string name="menu_action_about_us">About us</string>
+    <!--wow-->
+
+    <string-array name="navigation_drawer_items_array">
+        <item>About</item>
+        <item>Numbers</item>
+
+    </string-array>
+
+
+
+
+
 </resources>
